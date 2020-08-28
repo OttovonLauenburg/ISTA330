@@ -10,6 +10,17 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
  */
 
  var canGetEqualCookies = function(cookies, extraCookies) {
-     
+   var len = cookies.length;
+   var arrmax = cookies.sort(function(a, b){return b - a})[0];
+   var difsum = 0;
+   for (i = 0; i < len; i ++) {
+      difsum += arrmax - cookies[i];
+   }
+   extraCookies -= difsum;
+   if (extraCookies >= 0) {
+     if (extraCookies % 3 === 0)
+        return "True";
+   }
+   return "False";
     
  };
