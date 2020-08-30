@@ -19,11 +19,11 @@ const q2 = [{
 
 const q3 = [{
     input: [[5, 6, 1]],
-    output: 0
+    output: 1
 },
 {
     input: [[3, 5, 2, 8]],
-    output: 3
+    output: 4
 }];
 
 const q4 = [{
@@ -41,7 +41,7 @@ const q5 = [{
 },
 {
     input: [19],
-    output: 19
+    output: 5
 }];
 
 const q6 = [{
