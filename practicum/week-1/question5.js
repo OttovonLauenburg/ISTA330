@@ -12,7 +12,20 @@ output: 3
 */
 
 var minimalReduction = function(n) {
-
+  var step = 0;
+  while (n !== 0){
+    if (n % 3 === 0) {
+      step += 1;
+      n /= 3;
+    } else if (n % 4 === 0) {
+      step += 1;
+      n /= 4;
+    } else {
+      step += n;
+      n -= n;
+    }
+  }
+  return step;
 };
 
 console.log('hi');
