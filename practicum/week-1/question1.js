@@ -12,5 +12,4 @@ var runningSum = function(input) {
       input[i] = input[i - 1] + input[i];
    }
    return input;
-   }
 };
