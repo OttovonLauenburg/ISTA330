@@ -19,8 +19,8 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
    extraCookies -= difsum;
    if (extraCookies >= 0) {
      if (extraCookies % 3 === 0)
-        return "True";
+        return "true";
    }
-   return "False";
+   return "false";
     
  };
