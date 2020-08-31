@@ -8,5 +8,17 @@ output: [1, 0, 1, 2]
 */
 
 var biggerAndEven = function(input) {
-
+  var output = input.map(bigeven);
+  
+  function bigeven(value, index, array) {
+    var num = 0;
+    var x;
+    for (x of array){
+      if (x > value && x % 2 === 0){
+        num += 1;
+      }
+    }
+    return num;
+  };
+  return output;
 };
