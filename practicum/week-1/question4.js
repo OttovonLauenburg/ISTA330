@@ -15,12 +15,13 @@ var howManyCommon = function(A, B) {
   var lenB = B.length;
   var com = [];
   
-  for (i = 0; i <= lenA; i ++) {
-    for (j = 0; j <= lenB; j ++) {
+  for (i = 0; i < lenA; i ++) {
+    for (j = 0; j < lenB; j ++) {
       if (A[i] === B[j]) {
         com.push(A[i]);
       }
     }
   }
-  return Array.from(new Set(com)).length;
+
+  return com.length;
 };
