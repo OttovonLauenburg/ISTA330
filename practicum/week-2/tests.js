@@ -1,181 +1,193 @@
-
+// largestNumberIsAtLeastTwice
 const q1 = [{
-    input: [[5, 6, 1]],
-    output: [5, 11, 12]
-},
-{
-    input: [[43, -3, -39]],
-    output: [43, 40, 1]
-}];
-
-const q2 = [{
-    input: [[5, 6, 1], 6],
+    input: [[3,2,21,50]],
     output: true
 },
 {
-    input: [[3, 5, 2], 6],
+    input: [[3,2,1,5]],
     output: false
 }];
-
+// largestSubarray
+const q2 = [{
+    input: [[-12,3,-1,5,-2,1,-7]],
+    output: 7
+},
+{
+    input: [[-17,3,1,5,-9,-1,10]],
+    output: 10
+}];
+// PascalTriangle
 const q3 = [{
-    input: [[5, 6, 1]],
-    output: 1
+    input: [4],
+    output: [
+        [1],
+       [1,1],
+      [1,2,1],
+     [1,3,3,1] 
+   ]
 },
 {
-    input: [[3, 5, 2, 8]],
-    output: 4
+    input: [5],
+    output: [
+        [1],
+       [1,1],
+      [1,2,1],
+     [1,3,3,1],
+    [1,4,6,4,1]
+   ]
 }];
-
+//hasDuplicates
 const q4 = [{
-    input: ['asDf', 'dsssaaFa'],
-    output: 6
+    input: [[19,1,1,23,23,4,3,23,1,2]],
+    output: true
 },
 {
-    input: ['te', 'TTTER'],
-    output: 0
+    input: [[3,5,90,21]],
+    output: false
 }];
-
+//isMonotonic
 const q5 = [{
-    input: [12],
-    output: 3
+    input: [[12, 6, 2, 2, 2, 0]],
+    output: true
 },
 {
-    input: [19],
-    output: 5
+    input: [[29, 6, 31, 2, 23, 40]],
+    output: false
 }];
-
+// m_element
 const q6 = [{
-    input: [[1, 2, 2, 3, 4, 7, 9 ]],
-    output: 3
+    input: [[1, 2, 2, 3, 2, 7, 2]],
+    output: 2
 },
 {
     input: [[1, 2, 3, 4, 5, 6, 7, 8]],
-    output: 4.5
+    output: -1
 }];
-
+//transpose
 const q7 = [{
-    input: [[4, 3, 8, 0]],
-    output: 4
+    input: [[[1,2,3],[4,5,6]]],
+    output: [[1,4], [2,5], [3,6]]
 },
 {
-    input: [[1, 3, 4, 2, 6, 8, 5, 7]],
-    output: 16
+    input: [[[1,4], [2,5], [3,6]]],
+    output: [[1,2,3],[4,5,6]]
 }];
-
+//d_integer
 const q8 = [{
-    input: [[23, 44, 12, 4]],
-    output: [1, 0, 1, 2]
+    input: [[3,5,3,3,5,1]],
+    output: 3
 },
 {
-    input: [[1, 3, 4, 2, 6, 8, 5, 7]],
-    output: [4, 3, 2, 3, 1, 0, 2, 1]
+    input: [[3,5,3,9,6,45,86,9]],
+    output: -1
 }];
-
+//largestGroupsCount
 const q9 = [{
-    input: ['llheo', [2, 3, 0, 1, 4]],
-    output: 'hello'
+    input: [11],
+    output: 2
 },
 {
-    input: ['emelwco', [1, 5, 6, 2, 0, 3, 4]],
-    output: 'welcome'
+    input: [15],
+    output: 6
 }];
-
+//minPairs
 const q10 = [{
-    input: [472],
-    output: 5
+    input: [[1,-5,-10,24,19,-4,-14,23]],
+    output: [[-5, -4], [23, 24]]
 },
 {
-    input: [87034],
-    output: 8
+    input: [[17,-5,-1,24,29,54,1]],
+    output: [[-1, 1]]
 }];
-
+//d-count
 const q11 = [{
-    input: [[2, 5, 4, 2]],
-    output: [5, 5, 2, 2, 2, 2]
+    input: [[2,1,26,3], [-5,-2,10,-3,7], 6],
+    output: 1
 },
 {
-    input: [[0, 8, 1, 3, 2, 7]],
-    output: [3, 7, 7]
-}];
-
-const q12 = [{
-    input: ['abaabbabab'],
-    output: 4
-},
-{
-    input: ['aaababbb'],
+    input: [[2,100,37,3], [4,8,10,0,-14], 10],
     output: 2
 }];
 
+//fibonacci
+const q12 = [{
+    input: [9],
+    output: 34
+},
+{
+    input: [30],
+    output: 832040
+}];
+
 let result = [{
-    functionName: 'runningSum',
-    functionCode: runningSum,
+    functionName: 'largestNumberIsAtLeastTwice',
+    functionCode: largestNumberIsAtLeastTwice,
     trials: [],
     cases: q1
 },
 {
-    functionName: 'canGetEqualCookies',
-    functionCode: canGetEqualCookies,
+    functionName: 'largestSubarray',
+    functionCode: largestSubarray,
     trials: [],
     cases: q2
 },
 {
-    functionName: 'numberOfOrderedPairs',
-    functionCode: numberOfOrderedPairs,
+    functionName: 'PascalTriangle',
+    functionCode: PascalTriangle,
     trials: [],
     cases: q3
 },
 {
-    functionName: 'howManyCommon',
-    functionCode: howManyCommon,
+    functionName: 'hasDuplicates',
+    functionCode: hasDuplicates,
     trials: [],
     cases: q4
 },
 {
-    functionName: 'minimalReduction',
-    functionCode: minimalReduction,
+    functionName: 'isMonotonic',
+    functionCode: isMonotonic,
     trials: [],
     cases: q5
 },
 {
-    functionName: 'median',
-    functionCode: median,
+    functionName: 'm_element',
+    functionCode: m_element,
     trials: [],
     cases: q6
 },
 {
-    functionName: 'maxSumOfMins',
-    functionCode: maxSumOfMins,
+    functionName: 'transpose',
+    functionCode: transpose,
     trials: [],
     cases: q7
 },
 {
-    functionName: 'biggerAndEven',
-    functionCode: biggerAndEven,
+    functionName: 'd_integer',
+    functionCode: d_integer,
     trials: [],
     cases: q8
 },
 {
-    functionName: 'suffleString',
-    functionCode: suffleString,
+    functionName: 'largestGroupsCount',
+    functionCode: largestGroupsCount,
     trials: [],
     cases: q9
 },
 {
-    functionName: 'maxMinusMin',
-    functionCode: maxMinusMin,
+    functionName: 'minPairs',
+    functionCode: minPairs,
     trials: [],
     cases: q10
 },
 {
-    functionName: 'decode',
-    functionCode: decode,
+    functionName: 'd_count',
+    functionCode: d_count,
     trials: [],
     cases: q11
 },
 {
-    functionName: 'maxBalanceNumber',
-    functionCode: maxBalanceNumber,
+    functionName: 'fibonacci',
+    functionCode: F,
     trials: [],
     cases: q12
 }
