@@ -13,5 +13,29 @@ output: [
 */
 
 var PascalTriangle = function(n) {
-
+  if (n > 2){
+    n -= 2;
+    var returnarr = [[1],[1,1]];
+    var linegen = function (num, inarr){
+      if (num > n){
+        return inarr + [1];
+      } else if (num <= n){
+        var newline = [1];
+        for (let i = 0; i < inarr.length - 1; i ++){
+          newline.push(inarr[i] + inarr[i + 1]);            
+        }
+        newline.push(1);
+        returnarr.push(newline);
+        return linegen(num + 1, newline);
+      }
+    };
+    linegen(1,[1,1]);
+    return returnarr;
+  } else if (n === 0){
+    return [];
+  } else if (n === 1){
+    return [1];
+  } else if (n === 2){
+    return [1,1];
+  }
 };
