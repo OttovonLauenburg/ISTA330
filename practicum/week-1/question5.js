@@ -22,7 +22,7 @@ var minimalReduction = function(n) {
       n /= 4;
     } else {
       step += n;
-      n -= n;
+      n -= 1;
     }
   }
   return step;
