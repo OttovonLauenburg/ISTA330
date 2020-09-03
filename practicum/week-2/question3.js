@@ -15,7 +15,7 @@ output: [
 var PascalTriangle = function(n) {
   if (n > 2){
     n -= 2;
-    var returnarr [1,1,1];
+    var returnarr = [1,1,1];
     var linegen = function (num, inarr){
       if (num > n){
         return inarr + [1];
