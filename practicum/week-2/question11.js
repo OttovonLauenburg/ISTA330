@@ -14,5 +14,28 @@ output: 1
 */
 
 var d_count = function(input1, input2, d) {
+  let l = 0;
+  for (let i of input1){
+    var b = true;
+    for (let j of input2){
+      let k = i - j;
+      if (k < 0){
+        k *= -1;
+      }
+      
+      if (k > d){
+        b = b && true;
+      } else {
+        b = b && false;
+      }
+      console.log(b);
+    } 
+    if (b){
+      l += 1;
+      console.log(b,l);
+      //return i;
+    }
+  }
 
+  return l;
 };

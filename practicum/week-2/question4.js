@@ -13,5 +13,7 @@ Example:
 */
 
 var hasDuplicates = function(input) {
+  for (let i in input){
 
+  }
 };
