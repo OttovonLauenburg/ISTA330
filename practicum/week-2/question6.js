@@ -12,5 +12,19 @@ output: 2
 */
 
 var m_element = function(input) {
-
+  var valuestat = {};
+  for (let i of input){
+    if (i in valuestat === false){
+      valuestat[i] = 0;
+    }
+    valuestat[i] += 1;
+  }
+  
+  console.log(valuestat);
+  for (let j in valuestat){
+    if (valuestat[j] >= (input.length / 2)){
+      return j;
+    }
+  }
+  return -1;
 };
