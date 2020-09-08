@@ -191,7 +191,7 @@ function isEqual(a1, a2){
         return false;
     }
     for(let i = 0; i < a1.length; i++) {
-        if(a1[i] !== a2[i]) {
+        if(!isEqual(a1[i], a2[i])) {
             return false;
         }
     }
@@ -199,13 +199,13 @@ function isEqual(a1, a2){
 }
 
 for(let f of result){
-    for(let x of f.cases){
-        let output = f.functionCode(...x.input);
+    for(let x of f.cases){    
         let trial = {status: 'failed',
-         input: x.input,
+         input: x.input + "",
         expected: x.output, 
-        output: output};
-        if(isEqual(x.output, output)) {
+        output: undefined};
+        trial.output = f.functionCode(...x.input);
+        if(isEqual(x.output, trial.output)) {
             trial.status = 'success'
         }
         f.trials.push(trial);

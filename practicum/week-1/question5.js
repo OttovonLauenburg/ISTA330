@@ -30,4 +30,3 @@ var minimalReduction = function(n) {
   return step;
 };
 
-console.log('hi');
