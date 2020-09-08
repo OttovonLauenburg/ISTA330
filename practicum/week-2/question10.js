@@ -31,10 +31,10 @@ var minPairs = function(input) {
   
   var returnarr;
   for (let a in diff){
-    if (a < x){
+    if (Number(a) < Number(x)){
       x = a;
     }
   }
   returnarr = diff[x]
   return returnarr;
-};
+ };
