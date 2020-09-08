@@ -23,7 +23,7 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
    }
    return false;*/
    var sum = 0;
-   for (let i = 0; i < len; i ++){
+   for (let i = 0; i < cookies.length; i ++){
         sum += cookies[i];
    }
    sum += extraCookies;
