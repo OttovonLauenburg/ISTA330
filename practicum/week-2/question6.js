@@ -23,7 +23,7 @@ var m_element = function(input) {
   console.log(valuestat);
   for (let j in valuestat){
     if (valuestat[j] >= (input.length / 2)){
-      return j;
+      return Number(j);
     }
   }
   return -1;
