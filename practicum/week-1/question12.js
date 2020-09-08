@@ -28,17 +28,24 @@ var maxBalanceNumber = function(input) {
     letternum.push(index[x + 1] - index[x]);
   }
   letternum.push(input.length - index[index.length - 1]);
+  console.log(letternum);
   
-  var balancenum = 0;
+  var balancenum = [];
   for (var j in letternum){
     j = Number(j);
     if (j % 2 === 0){
-      if (letternum[j] === letternum[j + 1]){
-        balancenum += 1;
-      } else {
-        return 1;
+      if (letternum[j] <= letternum [j + 1]){
+        balancenum.push(letternum[j] * 2)
+      } else if (letternum[j] > letternum[j + 1]){
+        balancenum.push(letternum[j + 1]*2)
       }
     }
   }
-  return balancenum;
+  let a = 0;
+  for (let b of balancenum){
+    if (b > a){
+      a = b;
+    }
+  }
+  return a;
 };
