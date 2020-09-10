@@ -14,7 +14,7 @@ output: 2
 var m_element = function(input) {
   var valuestat = {};
   for (let i of input){
-    if (valuestat.indexOf(i) === -1){
+    if (i in valuestat === false){
       valuestat[i] = 0;
     }
     valuestat[i] += 1;

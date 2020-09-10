@@ -20,7 +20,7 @@ var minPairs = function(input) {
   for (var i of input){
     for (var j of input){
       if (j > i){
-        if (diff.indexOf(j - i) === -1){
+        if ((j - i) in diff === false){
           diff[j - i] = [];
         }
         diff[j - i].push([i,j])

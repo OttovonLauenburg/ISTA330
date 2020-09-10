@@ -11,5 +11,5 @@ output: true
 */
 
 var isPalindrome = function(s) {
-
+  
 };
