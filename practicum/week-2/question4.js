@@ -15,7 +15,7 @@ Example:
 var hasDuplicates = function(input) {
   var set = [];
   for (let x of input){
-    if (x in set === false){
+    if (set.indexOf(x) === -1){
       set.push(x);
     } else {
       return true;
