@@ -13,7 +13,13 @@ Example:
 */
 
 var hasDuplicates = function(input) {
-  for (let i in input){
-
+  var set = [];
+  for (let x of input){
+    if (x in set === false){
+      set.push(x);
+    } else {
+      return true;
+    }
   }
+  return false;
 };
