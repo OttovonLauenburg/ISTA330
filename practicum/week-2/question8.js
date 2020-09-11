@@ -15,7 +15,7 @@ output: 3
 var d_integer = function(input) {
    var stat = {};
    for (let x of input) {
-    if (x in atat === false){
+    if (x in stat === false){
       stat[x] = 0;
      }
      stat[x] += 1;
