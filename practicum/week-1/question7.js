@@ -12,11 +12,31 @@ output: 4
 
 var maxSumOfMins = function(input) {
   var sum = 0;
-  while (input.length !== 0){
-    input.sort(function(a, b){return a - b});
-    sum += input[input.length - 2];
-    input.pop();
-    input.pop();
+  var len = input.length;
+  while (len > 0){
+    var maxn = 0;
+    var maxin = 0;
+    var secondmaxn = 0;
+    var secondin = 0;
+    for (let i in input){
+        if (typeof input[i] !== "undefined" && input[i] > maxn){
+            if (maxn > secondmaxn){
+                secondmaxn = maxn;
+                secondin = maxin;
+            }
+            maxn = input[i];
+            maxin = i;
+        }  else if (typeof input[i] !== "undefined" && input[i] < maxn && input[i] > secondmaxn){
+            secondmaxn = input[i];
+            secondin = i;
+        }
+    }
+    delete input[maxin];
+    sum += secondmaxn;
+    delete input[secondin];
+    len -= 2;
   }
+  
   return sum;
 };
+

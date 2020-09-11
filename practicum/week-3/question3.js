@@ -9,5 +9,18 @@ output: true
 */
 
 var kStepAway = function(input, k) {
+  var ind = [];
+  for (let i in input){
+     if (input[i] === 1){
+       ind. push(Number(i));
+     }
+  }
 
+  for (let j = 0; j < ind.length - 1; j ++){
+    if ((ind[j + 1] - ind[j]) <= k){
+      return false;
+    }
+  }
+  
+  return true;
 };

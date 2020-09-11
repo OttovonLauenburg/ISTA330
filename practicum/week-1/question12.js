@@ -28,7 +28,7 @@ var maxBalanceNumber = function(input) {
     letternum.push(index[x + 1] - index[x]);
   }
   letternum.push(input.length - index[index.length - 1]);
-  console.log(letternum);
+
   
   var balancenum = [];
   for (var j in letternum){

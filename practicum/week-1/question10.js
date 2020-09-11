@@ -11,11 +11,17 @@ var maxMinusMin = function(n) {
   n += "";
   var narr = n.split("");
   
-  narr.forEach(tonumber);
-  function tonumber(item, index, arr){
-    arr[index] = Number(item);
-  }
+ var maxn = 0;
+ var minn = Number(narr[0]);
+ for (let x of narr){
+	  if (Number(x) > maxn){
+	    maxn = Number(x);
+	  }
+	  if (Number(x) < minn){
+			minn = Number(x);
+	  }
+ }
   
-  narr.sort(function(a, b){return a - b});
-  return narr[narr.length - 1] - narr[0];
+
+  return maxn - minn;
 };

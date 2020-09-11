@@ -7,7 +7,6 @@ output: 3
 
 var median = function(input) {
   var len = input.length;
-  input.sort(function(a, b){return a - b});
   if (len % 2 !== 0){
 		var median = input[(len - 1)/ 2];
   } else {
