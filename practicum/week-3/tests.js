@@ -37,7 +37,8 @@ const q4 = [{
         [2,3],
         [1,2],
         [1,2,3]
-      ]
+      ],
+    setEquality: true  
 },
 {
     input: [[1,2]],
@@ -46,7 +47,8 @@ const q4 = [{
         [1],
         [2],
         [1,2]
-    ]
+    ],
+    setEquality: true  
 }];
 // productOfOthers
 const q5 = [{
@@ -204,7 +206,29 @@ let result = [{
 }
 ];
 
-function isEqual(a1, a2){
+function setsAreEqual(a1, a2) {
+   if(a1.length !== a2.length) {
+       return false;
+   }
+   for(let x of a1) {
+       let xIsThere = false;
+       for(let y of a2) {
+          if(isEqual(x, y)) {
+              xIsThere = true;
+              break;
+          }
+       }
+       if(!xIsThere) {
+           return false;
+       }
+   }
+   return true;
+}
+
+function isEqual(a1, a2, setEquality){
+    if(setEquality) {
+        return setsAreEqual(a1, a2);
+    }
     const t = typeof(a1);
     if((t === 'boolean') || (t === 'number') || (t === 'string')){
         return a1 === a2;
@@ -229,7 +253,7 @@ for(let f of result){
         output: undefined};
         trial.output = f.functionCode(...x.input);
         
-        if(isEqual(x.output, trial.output)) {
+        if(isEqual(x.output, trial.output, x.setEquality)) {
             trial.status = 'success'
         }
         f.trials.push(trial);

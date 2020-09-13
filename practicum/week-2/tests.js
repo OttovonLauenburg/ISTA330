@@ -87,8 +87,8 @@ const q9 = [{
     output: 2
 },
 {
-    input: [15],
-    output: 6
+    input: [24],
+    output: 5
 }];
 //minPairs
 const q10 = [{

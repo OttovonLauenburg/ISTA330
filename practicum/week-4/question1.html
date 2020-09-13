@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="question">
+        Using the array flowers below, 
+        display the flowers. Use the div 'flowersDiv'.
+        You should display the flowers in two rows,
+        each row containing 4 flowers.
+        For each flower, you should show the image
+        and under the image display its name.
+    </div>
+    <div id='flowersDiv'>
+
+    </div>
+    <script>
+        /*
+           Using the array flowers below, 
+           display the flowers. Use the div 'flowersDiv'.
+           You should display the flowers in two rows,
+           each row containing 4 flowers.
+           For each flower, you should show the image
+           and under the image display its name.
+        */
+       class Flower {
+           constructor(name, pictureName) {
+               this.name = name;
+               this.picture = pictureName;
+           }
+       }
+       let daffodil = new Flower('Daffodil', 'daffodil.png');
+       let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
+       let lily = new Flower('Lily', 'lily.png');
+       let daisy = new Flower('Daisy', 'daisy.png');
+       let sunflower = new Flower('Sunflower', 'sunflower.png');
+       let tulip = new Flower('Tulip', 'tulip.png');
+       let rose = new Flower('Rose', 'rose.png');
+       let waterlily = new Flower('Water lily', 'waterlily.png');
+       
+       let flowers = [
+             daffodil,
+             cherryblossom,
+             lily,
+             daisy,
+             sunflower,
+             tulip,
+             rose,
+             waterlily
+       ];
+    </script>
+</body>
+</html>
