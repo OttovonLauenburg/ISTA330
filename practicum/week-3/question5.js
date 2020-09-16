@@ -10,6 +10,16 @@ output: [24,12,8,6]
 */
 
 var productOfOthers = function(input) {
-
+	var returnarr = input.map(function(obj,i){
+	    var product = 1;
+		for (let j in input){
+			if (Number(j) !== Number(i)){
+				product *= input[j];
+			}
+		}
+		return product;
+	});
+	return returnarr;
 };
+
 

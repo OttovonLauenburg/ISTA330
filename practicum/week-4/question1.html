@@ -51,6 +51,12 @@
              rose,
              waterlily
        ];
+       var div = document.getElementById('flowersDiv');
+       for (let x of flowers){
+         var flowerImg = document.createElement("img");
+         flowerImg.src=x.picture;
+         div.appendChild(flowerImg);
+       }
     </script>
 </body>
 </html>

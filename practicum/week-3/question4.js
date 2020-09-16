@@ -19,5 +19,5 @@ Example:
 */
 
 var powerSet = function(input) {
-
+	
 };

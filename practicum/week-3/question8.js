@@ -13,5 +13,23 @@ output: [0,0,1,1,2,2]
 */
 
 var sortColors = function(input) {
-
+    var returnarr = [];
+	var sort = function(input){
+		if (input === []){
+			return [];
+		}else {
+			for (let i = 0;i < input.length - 1;i ++){
+				var swap;
+				if (input[i] > input[i + 1]){
+					swap = input[i + 1];
+					input[i + 1] = input[i];
+					input[i] = swap;
+				}
+			}
+			//returnarr.unshift(input[input.length - 1]);
+			return sort(input[0,input.length - 1]).unshift(input[input.length - 1]);
+		}
+	};
+	return sort(input);
 };
+console.log(sortColors([2,0,2,1,1,0]));

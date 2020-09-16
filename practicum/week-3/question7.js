@@ -17,5 +17,16 @@ output: 7
 */
 
 var minPath = function(M) {
+  var obj = {};
+  for (var i in M){
+        for (var j in M[i]){
+            if ([i,j] in obj === false){
+                obj[[i,j]] = M[i][j];
+            }
+        }
+  }
+
+  return M[[1,0]];
 
 };
+console.log(minPath([[1,3,1],[1,5,1],[4,2,1]]));
