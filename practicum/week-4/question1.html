@@ -52,9 +52,9 @@
              waterlily
        ];
        var div = document.getElementById('flowersDiv');
-       for (let x of flowers){
+       for (let i = 0; i < 4; i ++){
          var flowerImg = document.createElement("img");
-         flowerImg.src=x.picture;
+         flowerImg.src="images/"+ flowers[i].picture;
          div.appendChild(flowerImg);
        }
     </script>
