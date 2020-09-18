@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="question">
-        1. Display the flowers as per question 1.<br/>
-        2. Add the following functionality to the page:<br/>
-           When users click on an image, the images should be 
-           reorganized using the following rule:<br />
-           The flowers that has been clicked goes to the first position in
-           the first row. The next position in the first row will
-           be the flower whose name is alphabeticlly right after the
-           name of the first one and so on for the other flowers.
-           <br />
-           So, for example if a user clicks on the flower lily,
-           then the flowers should be rearranged as:
-           <br />
-      <span class="space">lily</span>   <span class="space">rose</span>         <span class="space">sunflower</span>        <span class="space">tulip</span>   <br />
-      <span class="space">waterlily</span>   <span class="space">cherryblossom</span>   <span class="space">daffodil</span>  <span class="space">daisy</span>     
-     
+        1. Display the flowers as per question 1.<br />
+        2. Add the following functionality to the page:<br />
+        When users click on an image, the images should be
+        reorganized using the following rule:<br />
+        The flowers that has been clicked goes to the first position in
+        the first row. The next position in the first row will
+        be the flower whose name is alphabeticlly right after the
+        name of the first one and so on for the other flowers.
+        <br />
+        So, for example if a user clicks on the flower lily,
+        then the flowers should be rearranged as:
+        <br />
+        <table>
+            <tr>
+                <td>
+                    lily
+                </td>
+                <td>
+                    rose
+                </td>
+                <td>
+                    sunflower
+                </td>
+                <td>
+                    tulip
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    water lily
+                </td>
+                <td>
+                    cherry blossom
+                </td>
+                <td>
+                    daffodil
+                </td>
+                <td>
+                    daisy
+                </td>
+            </tr>
+        </table>
+
     </div>
     <div id='flowersDiv'>
 
@@ -45,31 +75,32 @@
         waterlily   cherryblossom  daffodil    daisy 
         
         */
-       class Flower {
-           constructor(name, pictureName) {
-               this.name = name;
-               this.picture = pictureName;
-           }
-       }
-       let daffodil = new Flower('Daffodil', 'daffodil.png');
-       let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
-       let lily = new Flower('Lily', 'lily.png');
-       let daisy = new Flower('Daisy', 'daisy.png');
-       let sunflower = new Flower('Sunflower', 'sunflower.png');
-       let tulip = new Flower('Tulip', 'tulip.png');
-       let rose = new Flower('Rose', 'rose.png');
-       let waterlily = new Flower('Water lily', 'waterlily.png');
-       
-       let flowers = [
-             daffodil,
-             cherryblossom,
-             lily,
-             daisy,
-             sunflower,
-             tulip,
-             rose,
-             waterlily
-       ];
+        class Flower {
+            constructor(name, pictureName) {
+                this.name = name;
+                this.picture = pictureName;
+            }
+        }
+        let daffodil = new Flower('Daffodil', 'daffodil.png');
+        let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
+        let lily = new Flower('Lily', 'lily.png');
+        let daisy = new Flower('Daisy', 'daisy.png');
+        let sunflower = new Flower('Sunflower', 'sunflower.png');
+        let tulip = new Flower('Tulip', 'tulip.png');
+        let rose = new Flower('Rose', 'rose.png');
+        let waterlily = new Flower('Water lily', 'waterlily.png');
+
+        let flowers = [
+            daffodil,
+            cherryblossom,
+            lily,
+            daisy,
+            sunflower,
+            tulip,
+            rose,
+            waterlily
+        ];
     </script>
 </body>
+
 </html>
