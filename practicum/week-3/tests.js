@@ -10,11 +10,13 @@ const q1 = [{
 // findDuplicates
 const q2 = [{
     input: [[19,3,2,10,8,2,3,5]],
-    output: [2,3]
+    output: [2,3],
+    setEquality: true 
 },
 {
     input: [[-17,3,1,5,-9,1,10]],
-    output: [1]
+    output: [1],
+    setEquality: true 
 }];
 // kStepAway
 const q3 = [{
@@ -83,7 +85,7 @@ const q7 = [{
         [1,4,5],
         [4,3,2]
       ]],
-    output: 12
+    output: 11
 }];
 // sortColors
 const q8 = [{
@@ -169,7 +171,7 @@ let result = [{
     cases: q6
 },
 {
-    functionName: 'minPath',
+    functionName: '(Bonus) minPath',
     functionCode: minPath,
     trials: [],
     cases: q7
@@ -207,12 +209,21 @@ let result = [{
 ];
 
 function setsAreEqual(a1, a2) {
+   if(!a2) {
+       return false;
+   } 
    if(a1.length !== a2.length) {
        return false;
    }
    for(let x of a1) {
        let xIsThere = false;
+       if(x.length) {
+           x.sort();
+       }
        for(let y of a2) {
+          if(y.length) {              
+              y.sort();
+          } 
           if(isEqual(x, y)) {
               xIsThere = true;
               break;
