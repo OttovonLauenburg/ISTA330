@@ -16,17 +16,28 @@ var largestGroupsCount = function(n) {
   var x = 10;
   var digitsum = [];
   while (x <= n){
-    let stringnum = String(x);
-    stringnum.split("");
-    y = Number(stringnum[0]) + Number(stringnum[1]);
-    digitsum.push(y);
+    digitsum.push((Math.floor(x/10)) + (x%10));
     x += 1;
   }
-  
+
+  var max = 0;
+  var obj = {};
+  for (let y of digitsum){
+    if (y >= 1 && y <= 9){
+        if (y in obj === false){
+            obj[y] = 1
+        }
+        obj[y] += 1;
+        if (obj[y] > max){
+            max = obj[y];
+        }
+    }
+  }
+
   var count = 0;
-  for (let z of digitsum){
-    if (z >= 1 && z <= 9){
-      count += 1;
+  for (let z in obj){
+    if (obj[z] === max){
+        count += 1;
     }
   }
   return count;
