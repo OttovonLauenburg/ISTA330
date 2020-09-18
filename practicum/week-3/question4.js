@@ -41,7 +41,7 @@ Example:
 
 console.log(powerSet([1,2,3]));*/
 
-var x = function(input,n){
+/*var x = function(input,n){
     var y = [];
 	for (let i = 0;i < input.length; i++){
 		let k = 1;
@@ -57,7 +57,7 @@ var x = function(input,n){
 			k += 1;
 		}
 		
-	}
+	}*/
   };
 
 console.log(x())  
