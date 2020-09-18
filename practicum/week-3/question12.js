@@ -11,5 +11,29 @@ Example:
 */
 
 var isCrossing = function(s) {
-
+  var x = 0;
+  var y = 0;
+  var location = ['00'];
+  for (let direc in s){
+        if (s[direc] === 'N'){
+            y += 1;
+        }
+        if (s[direc] === 'S'){
+            y -= 1;
+        }
+        if (s[direc] === 'E'){
+            x += 1;
+        }
+        if (s[direc] === 'W'){
+            x -= 1;
+        }
+        k = x+""+y+"";
+        if (location.indexOf(k) !== -1){
+            return true;
+        }else {
+            location.push(k);
+        }
+  }
+  return false;
 };
+
