@@ -11,7 +11,13 @@ output: true
 */
 
 var isPalindrome = function(s) {
-  s = s.split(" ").join("").toLowerCase().split("");
+  s = s.split(" ").join("").toLowerCase();
+  l = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  for (let k in s){
+        if (l.indexOf(s[k]) === -1){
+           s = s.replace(s[k],"");
+        }
+  }
   for (let i in s){
     if (s[i] !== s[s.length - 1 - i]){
       return false

@@ -35,5 +35,30 @@ output: 4
 */
 
 var romanToInteger = function(s) {
+	var int = 0;
+	var obj = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000};
 
+	for (let x in obj){
+		for (let y in obj){
+		    indx = s.indexOf(x);
+			indy = s.indexOf(y);
+			indx1 = s.lastIndexOf(x);
+			indy1 = s.lastIndexOf(y);
+			if (indx !== -1 && indy !== -1 && indx1 !== -1 && indy1 !== -1){
+				if (obj[x] < obj[y]){
+					if(indx < indy || indx1 < indy1){
+						int += obj[y]-obj[x];
+						s = s.replace(x+y,'');
+						console.log(x,y);
+					}
+				}
+			}
+		}
+	}
+	for (let char of s){
+		if (char in obj){
+			int += obj[char];
+		}
+	}
+	return int;
 };
