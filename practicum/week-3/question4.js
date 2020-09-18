@@ -18,7 +18,7 @@ Example:
 ]
 */
 
-/*var powerSet = function(input) {
+var powerSet = function(input) {
   var powerset = [];
   for (let i in input){
       var subset = [input[i]];
@@ -39,7 +39,6 @@ Example:
   return powerset;
 };
 
-console.log(powerSet([1,2,3]));*/
 
 /*var x = function(input,n){
     var y = [];
@@ -58,9 +57,12 @@ console.log(powerSet([1,2,3]));*/
 		}
 		
 	}
-  };*/
-
-  var powerSet = function(input) {
-
   };
 
+var powerSet = function(input) {
+  var powerarr = [];
+  
+
+  };*/
+
+   
