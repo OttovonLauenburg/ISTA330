@@ -34,8 +34,8 @@
        }
        let daffodil = new Flower('Daffodil', 'daffodil.png');
        let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
-       let lily = new Flower('Lily', 'lily.jpg');
-       let daisy = new Flower('Daisy', 'daisy.jpg');
+       let lily = new Flower('Lily', 'lily.png');
+       let daisy = new Flower('Daisy', 'daisy.png');
        let sunflower = new Flower('Sunflower', 'sunflower.png');
        let tulip = new Flower('Tulip', 'tulip.png');
        let rose = new Flower('Rose', 'rose.png');
@@ -51,12 +51,30 @@
              rose,
              waterlily
        ];
+       //Get flowersDiv
        var div = document.getElementById('flowersDiv');
-       for (let i = 0; i < 4; i ++){
+       for (let i = 0; i < 8; i ++){
+         // Create Div to include every certain flower image and its name
+         var insideDiv = document.createElement("div");
+         insideDiv.style.display = "inline-block";
+         // Flower Images Setting
          var flowerImg = document.createElement("img");
          flowerImg.src="images/"+ flowers[i].picture;
-         div.appendChild(flowerImg);
-       }
+         insideDiv.appendChild(flowerImg);
+         // Flower Names Setting
+         var para=document.createElement("p");
+         para.style.textAlign = "center";
+         var flowerName = document.createTextNode(flowers[i].name);
+         para.appendChild(flowerName);
+         insideDiv.appendChild(para);
+         // Add insideDiv to flowersDiv
+         div.appendChild(insideDiv);
+         if (i === 3){
+            div.appendChild(document.createElement("br"));
+         }
+       } 
+
+       
     </script>
 </body>
 </html>
