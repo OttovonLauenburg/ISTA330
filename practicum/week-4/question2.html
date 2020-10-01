@@ -104,38 +104,85 @@
 
 
         var nextWord = function (oriArray,clickedFlower){
-	        var newArray = [clicked Flower];
-	        var len = newArray.length
-	        oriArray.pop(clickedFlower);
-	        var minFlower;
+	    var newArray = [clickedFlower];
+	    var oriArray = removeElement(oriArray,clickedFlower);
+
+	    var leng = oriArray.length;
+	    while (leng !== 0){	
 	        var collect = {};
-	        var leng = oriArray.length - 1;
-	        while (leng !== 0){
-		        for (let i in oriArray){
-			        if (i !== undefined){
-			            var strIndex = 0;
-				        var dif = oriArray[i].charCodeAt(strIndex) - newArray[len - 1].charCodeAt(strIndex);
-				        while (dif in collect === true){
-					        dif = oriArray[i].charCodeAt(strIndex + 1) - newArray[len - 1].charCodeAt(strIndex + 1);
-				        }
-				        collect[dif] = oriArray[i];
-			        }
-		        }
-	
-		        var min = 0;
+	        var len = newArray.length;
+		    for (let i in oriArray){
+			    var strIndex = 0;
+		        var dif = oriArray[i].charCodeAt(strIndex) - newArray[len - 1].charCodeAt(strIndex);
+			    if (dif in collect){
+				    collect[dif] = ['daffodil','daisy'];
+			    } else {collect[dif] = oriArray[i];}
+			//while (dif === 0){
+				//strIndex += 1;
+				//dif = oriArray[i].charCodeAt(strIndex) - newArray[len - 1].charCodeAt(strIndex);
+            //}
+			
+
+		    }
+		
+		        var positiveCount = 0;
 		        for (let j in collect){
-			        if (Number(j) >= 0 && Number(j) <= min){
-				        min = Number(j);
-				        closeFlower = collect[j];
+			        if (j > 0){
+				        positiveCount += 1;
 			        }
 		        }
 
-		        newArray.push(closeFlower);
-		        leng = leng - 1;
-		        oriArray.pop(closeFlower);
+		        if (positiveCount > 0){
+			        var closestFlower = minObject1(collect);
+		        } else {
+			        var closestFlower = minObject12(collect);
+		        }
+
+		        if (typeof closestFlower === 'object'){
+			        newArray.concat(closestFlower);
+		        } else {
+			        newArray.push(closestFlower);
+		        }
+
+		        var oriArray = removeElement(oriArray,closestFlower);
+		        leng -= 1;
+		
 	        }
 
 	        return newArray;
+        };
+
+        var removeElement = function(arr,e){
+	        var pos = arr.indexOf(e);
+	        arr.splice(pos, 1);
+	        return arr;
+        };
+
+        var minObject1 = function (obj){
+	        var min = 99999;
+	        var minString;
+	        for (let i in obj){
+	            if (Number(i) > 0){
+			        if (Number(i) < min){
+				        min = Number(i);
+				        minString = obj[i];
+		            }
+		        }
+	        }
+	        return minString;
+        };
+
+        var minObject12 = function (obj){
+	        var min = 99999;
+	        var minString;
+	        for (let i in obj){
+		        if (Number(i) < min){
+			        min = Number(i);
+			        minString = obj[i];
+		        }
+
+	        }
+	        return minString;
         };
 
 
