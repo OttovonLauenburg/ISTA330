@@ -1,195 +1,181 @@
-// largestNumberIsAtLeastTwice
+
 const q1 = [{
-    input: [[3,2,26,50]],
-    output: false
+    input: [[5, 6, 1]],
+    output: [5, 11, 12]
 },
 {
-    input: [[3,2,1,57]],
-    output: true
+    input: [[43, -3, -39]],
+    output: [43, 40, 1]
 }];
-// largestSubarray
+
 const q2 = [{
-    input: [[-12,3,-1,5,2,-1,-7]],
-    output: 9
+    input: [[5, 6, 1], 6],
+    output: true
 },
 {
-    input: [[-17,3,1,5,-9,-1,10]],
-    output: 10
+    input: [[3, 5, 2], 6],
+    output: false
 }];
-// PascalTriangle
+
 const q3 = [{
-    input: [6],
-    output: [
-        [1],
-       [1,1],
-      [1,2,1],
-     [1,3,3,1],
-    [1,4,6,4,1],
-   [1,5,10,10,5,1]
-   ]
+    input: [[5, 6, 1]],
+    output: 1
 },
 {
-    input: [5],
-    output: [
-        [1],
-       [1,1],
-      [1,2,1],
-     [1,3,3,1],
-    [1,4,6,4,1]
-   ]
-}];
-//hasDuplicates
-const q4 = [{
-    input: [[19,18,17,23,24,4,3,26,1,2]],
-    output: false
-},
-{
-    input: [[3,5,90,21,3]],
-    output: true
-}];
-//isMonotonic
-const q5 = [{
-    input: [[12, 6, 2, 2, 2, 3]],
-    output: false
-},
-{
-    input: [[29, 61, 310, 2500, 231000]],
-    output: true
-}];
-// m_element
-const q6 = [{
-    input: [[1, 3, 2, 3, 3, 7, 3]],
-    output: 3
-},
-{
-    input: [[1, 2, 3, 4, 5, 6, 7, 8]],
-    output: -1
-}];
-//transpose
-const q7 = [{
-    input: [[[1,2,3],[7,5,6]]],
-    output: [[1,7], [2,5], [3,6]]
-},
-{
-    input: [[[1,4], [2,5], [3,6]]],
-    output: [[1,2,3],[4,5,6]]
-}];
-//d_integer
-const q8 = [{
-    input: [[3,5,3,4,4,3,5,1,4,4]],
+    input: [[3, 5, 2, 8]],
     output: 4
+}];
+
+const q4 = [{
+    input: ['asDf', 'dsssaaFa'],
+    output: 6
 },
 {
-    input: [[3,6,3,9,6,45,86,9]],
-    output: -1
+    input: ['te', 'TTTER'],
+    output: 0
 }];
-//largestGroupsCount
-const q9 = [{
+
+const q5 = [{
     input: [12],
     output: 3
 },
 {
-    input: [24],
+    input: [19],
     output: 5
 }];
-//minPairs
-const q10 = [{
-    input: [[1,-5,-10,24,19,-4,-14,23]],
-    output: [[-5, -4], [23, 24]]
-},
-{
-    input: [[17,-5,-1,24,29,54,1,27,19]],
-    output: [[-1, 1], [17, 19], [27, 29]]
-}];
-//d-count
-const q11 = [{
-    input: [[2,1,26,3], [-5,-2,10,-3,7], 6],
-    output: 1
-},
-{
-    input: [[2,100,37,39], [4,8,10,0,-14], 10],
+
+const q6 = [{
+    input: [[1, 2, 2, 3, 4, 7, 9 ]],
     output: 3
+},
+{
+    input: [[1, 2, 3, 4, 5, 6, 7, 8]],
+    output: 4.5
 }];
 
-//fibonacci
-const q12 = [{
-    input: [10],
-    output: 55
+const q7 = [{
+    input: [[4, 3, 8, 0]],
+    output: 4
 },
 {
-    input: [30],
-    output: 832040
+    input: [[1, 3, 4, 2, 6, 8, 5, 7]],
+    output: 16
+}];
+
+const q8 = [{
+    input: [[23, 44, 12, 4]],
+    output: [1, 0, 1, 2]
+},
+{
+    input: [[1, 3, 4, 2, 6, 8, 5, 7]],
+    output: [4, 3, 2, 3, 1, 0, 2, 1]
+}];
+
+const q9 = [{
+    input: ['llheo', [2, 3, 0, 1, 4]],
+    output: 'hello'
+},
+{
+    input: ['emelwco', [1, 5, 6, 2, 0, 3, 4]],
+    output: 'welcome'
+}];
+
+const q10 = [{
+    input: [472],
+    output: 5
+},
+{
+    input: [87034],
+    output: 8
+}];
+
+const q11 = [{
+    input: [[2, 5, 4, 2]],
+    output: [5, 5, 2, 2, 2, 2]
+},
+{
+    input: [[0, 8, 1, 3, 2, 7]],
+    output: [3, 7, 7]
+}];
+
+const q12 = [{
+    input: ['abaabbabab'],
+    output: 4
+},
+{
+    input: ['aaababbb'],
+    output: 2
 }];
 
 let result = [{
-    functionName: 'largestNumberIsAtLeastTwice',
-    functionCode: largestNumberIsAtLeastTwice,
+    functionName: 'runningSum',
+    functionCode: runningSum,
     trials: [],
     cases: q1
 },
 {
-    functionName: 'largestSubarray',
-    functionCode: largestSubarray,
+    functionName: 'canGetEqualCookies',
+    functionCode: canGetEqualCookies,
     trials: [],
     cases: q2
 },
 {
-    functionName: 'PascalTriangle',
-    functionCode: PascalTriangle,
+    functionName: 'numberOfOrderedPairs',
+    functionCode: numberOfOrderedPairs,
     trials: [],
     cases: q3
 },
 {
-    functionName: 'hasDuplicates',
-    functionCode: hasDuplicates,
+    functionName: 'howManyCommon',
+    functionCode: howManyCommon,
     trials: [],
     cases: q4
 },
 {
-    functionName: 'isMonotonic',
-    functionCode: isMonotonic,
+    functionName: 'minimalReduction',
+    functionCode: minimalReduction,
     trials: [],
     cases: q5
 },
 {
-    functionName: 'm_element',
-    functionCode: m_element,
+    functionName: 'median',
+    functionCode: median,
     trials: [],
     cases: q6
 },
 {
-    functionName: 'transpose',
-    functionCode: transpose,
+    functionName: 'maxSumOfMins',
+    functionCode: maxSumOfMins,
     trials: [],
     cases: q7
 },
 {
-    functionName: 'd_integer',
-    functionCode: d_integer,
+    functionName: 'biggerAndEven',
+    functionCode: biggerAndEven,
     trials: [],
     cases: q8
 },
 {
-    functionName: 'largestGroupsCount',
-    functionCode: largestGroupsCount,
+    functionName: 'suffleString',
+    functionCode: suffleString,
     trials: [],
     cases: q9
 },
 {
-    functionName: 'minPairs',
-    functionCode: minPairs,
+    functionName: 'maxMinusMin',
+    functionCode: maxMinusMin,
     trials: [],
     cases: q10
 },
 {
-    functionName: 'd_count',
-    functionCode: d_count,
+    functionName: 'decode',
+    functionCode: decode,
     trials: [],
     cases: q11
 },
 {
-    functionName: 'fibonacci',
-    functionCode: F,
+    functionName: 'maxBalanceNumber',
+    functionCode: maxBalanceNumber,
     trials: [],
     cases: q12
 }
@@ -213,13 +199,12 @@ function isEqual(a1, a2){
 }
 
 for(let f of result){
-    for(let x of f.cases){
+    for(let x of f.cases){    
         let trial = {status: 'failed',
          input: x.input + "",
         expected: x.output, 
         output: undefined};
         trial.output = f.functionCode(...x.input);
-        
         if(isEqual(x.output, trial.output)) {
             trial.status = 'success'
         }
